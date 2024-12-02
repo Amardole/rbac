@@ -1,7 +1,6 @@
 # rbac
 Role Based Access Control with spring security 
 
-The **README.md** file provides comprehensive information about the project. Here is a detailed breakdown of its contents:
 
 ### Project Overview
 - **Title**: Role-Based Access Control (RBAC) with Spring Boot and JWT.
