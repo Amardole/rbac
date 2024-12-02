@@ -1,30 +1,62 @@
 # Role Based Access Control (RBAC) with Spring Boot and JWT
+The **README.md** file provides comprehensive information about the project. Here is a detailed breakdown of its contents:
 
-This repo hosts the source code for the article [**Role Based Access Control (RBAC) with Spring Boot and JWT**](https://medium.com/geekculture/role-based-access-control-rbac-with-spring-boot-and-jwt-bc20a8c51c15?source=github_source).
+### Project Overview
+- **Title**: Role-Based Access Control (RBAC) with Spring Boot and JWT.
+- **Purpose**: Demonstrates implementing authentication and authorization for REST APIs using JWT with Spring Boot.
+- **Key Features**:
+  - **JWT Authentication**: Secure access to APIs using JSON Web Tokens.
+  - **Role-Based Access Control (RBAC)**: Maps roles in JWT claims to Spring Security authorities.
+  - **Login Endpoint**: `/login` endpoint issues JWT upon user authentication.
+  - **SPA Compatibility**: Designed to work with Single Page Applications (SPAs) like ReactJS or Angular.
 
-This example project demonstrates how to use the Spring Boot's inbuilt OAuth2 Resoure Server to authenticate and 
-authorize REST APIs with JWT. First, we have enabled **JWT authentication** and secondly, have introduced 
-**Role Based Access Control (RBAC)** by mapping a roles claim in JWT to granted authorities in Spring Security.
+### Technologies Used
+1. **Backend**:
+   - **Spring Boot**: Provides the framework for building RESTful APIs.
+   - **OAuth2 Resource Server**: Handles JWT authentication and RBAC.
+   - **Java**: The primary programming language.
+2. **Security**:
+   - **JWT**: JSON Web Tokens for secure communication.
+   - **Spring Security**: Implements authentication and access control.
+   - **Keystore**: Stores cryptographic keys securely.
 
-Furthermore, provides a "/login" endpoint to generate and issue JWTs upon
-successful login by the users.
+### Steps to Run the Project
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/IMS94/spring-boot-jwt-authorization.git
+   cd spring-boot-jwt-authorization
+   ```
+2. **Build the Project**:
+   Ensure you have **Java 8+** and **Maven** installed.
+   ```bash
+   mvn clean install
+   ```
+3. **Run the Application**:
+   ```bash
+   mvn spring-boot:run
+   ```
+4. **Access Endpoints**:
+   - Use a REST client like Postman to test the `/login` and secured endpoints.
 
-This approach is ideal to be used as the 
-**backend for a single page application (SPA)** written using a frontend framework like
-ReactJS, Angular, etc...
+### Security Mechanisms
+- **JWT Authentication**:
+  - Ensures stateless authentication.
+  - Tokens include user roles for RBAC.
+- **Keystore Configuration**:
+  - Securely stores private keys for signing JWT.
 
-## Solution Overview
+### How to Use
+- Login via the `/login` endpoint to receive a JWT.
+- Use the JWT as a Bearer token to access secured endpoints.
+- Permissions are managed via roles in the JWT claim.
 
-![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/authorization_process.png?raw=true "Solution Overview")
+Let me know if you want the full README content or additional insights!
 
 ## Role Based Access Control
 An example of role based access control.
 
 ![RBAC Example](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/rbac_sample.png?raw=true "Solution Overview")
 
-## JWT Authentication Overview
-
-![Solution Overview](https://github.com/IMS94/spring-boot-jwt-authorization/blob/master/solution_overview.png?raw=true "Solution Overview")
 
 ## Getting Started
 
